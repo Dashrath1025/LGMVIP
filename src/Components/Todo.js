@@ -5,7 +5,7 @@ import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 
 function Todo(props) {
   const [line, setLine] = useState(false);
-  const [alert,setAlert]=useState(null)
+  const [alert,setAlert]=useState(null);
 
   const showAlert=(message,type)=>{
      setAlert({
@@ -28,8 +28,11 @@ function Todo(props) {
 
   return (
     <>
+
       <div>
+
       <Alert alert={alert} className="alert"/>
+      
       </div>
     <div className="todo_style">
       <span onClick={cutIt}>
@@ -40,7 +43,9 @@ function Todo(props) {
       </span>
       <li style={{ textDecoration: line ? "line-through" : "none" }}>
         {props.text}
+
       </li>
+
       </div>
 
       
